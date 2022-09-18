@@ -2,7 +2,6 @@ version: "3"
 
 services:
   webserver:
-    image: sindicalizi
     hostname: "apache24"
     container_name: 'webserver'
     build: ../../../../bin/apache2
@@ -12,7 +11,7 @@ services:
     links: 
       - mysql
     volumes: 
-      - "../:/var/www/html"
+      - "./:/var/www/html"
       - "../../../../logs/apache2:/var/log/apache2"
       - "~/.ssh:/root/.ssh"
     environment:
@@ -28,7 +27,6 @@ services:
       - "../../../../logs/mysql:/var/log/mysql"
     environment:
       MYSQL_ROOT_PASSWORD: 123456
-      MYSQL_DATABASE: test
-      MYSQL_USER: login
-      MYSQL_PASSWORD: 132551
+      MYSQL_DATABASE: login
+      MYSQL_PASSWORD: 123456
       TZ: "America/Bahia"
