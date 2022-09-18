@@ -1,0 +1,34 @@
+version: "3"
+
+services:
+  webserver:
+    image: sindicalizi
+    hostname: "apache24"
+    container_name: 'webserver'
+    build: ../../../../bin/apache2
+    ports:
+      - "80:80"
+      - "443:443"
+    links: 
+      - mysql
+    volumes: 
+      - "../:/var/www/html"
+      - "../../../../logs/apache2:/var/log/apache2"
+      - "~/.ssh:/root/.ssh"
+    environment:
+      TZ: "America/Bahia"
+  mysql:
+    hostname: "mysql80"
+    container_name: 'mysql'
+    build: ../../../../bin/mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - "../../../mysql:/var/lib/mysql"
+      - "../../../../logs/mysql:/var/log/mysql"
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: test
+      MYSQL_USER: login
+      MYSQL_PASSWORD: 132551
+      TZ: "America/Bahia"

@@ -1,0 +1,22 @@
+span {
+    color: red;
+}
+
+body {
+    background-color: mintcream;
+}
+
+.msg-success {
+    font-size: x-large;
+    color: springgreen;
+    top: 200px;
+    font-weight: bold;
+}
+
+.msg-error {
+    display: none;
+    font-size: x-large;
+    color: red;
+    top: 200px;
+    font-weight: bold;
+}

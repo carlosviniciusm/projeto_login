@@ -1,0 +1,22 @@
+{
+  "name": "receiveit/debtors",
+  "description": "Project Receiveit",
+  "authors": [
+    {
+      "name": "vinicius",
+      "email": "cvmm321@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "src\\": "src/",
+      "framework\\": "framework/"
+    }
+  },
+  "require": {
+    "ext-json": "*",
+    "ext-curl": "*",
+    "ext-pdo": "*",
+    "ext-dom": "*"
+  }
+}

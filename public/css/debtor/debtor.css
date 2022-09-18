@@ -1,0 +1,19 @@
+.msg-empty {
+    font-size: xx-large;
+    margin-top: 8rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.name {
+    width: 25rem;
+}
+
+.email {
+    width: 20rem;
+}
+
+.container {
+    max-width: 2000px;
+    margin-top: 1rem;
+}
